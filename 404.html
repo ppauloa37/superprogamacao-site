@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 Não encontrado</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            color: white;
+            font-family: monospace;
+            text-align: center;
+            align-items: center;
+            margin-top: 60px;
+            background-image: repeating-linear-gradient(
+                to top,
+                rgb(1, 1, 56))
+        }
+        #root {
+            top: 0.1px;
+        }
+
+    </style>
+</head>
+<body>
+    <canvas id="text"></canvas>
+    <header id="root">
+        <h2 class="logo">Super progamação</h2>
+        <h3><a href="/">Inicio</a></h3>
+        <h3><a href="/ajuda">Ajuda</a></h3>
+        <h3><button id="seta-fechar">↑</button></h3>
+        <h3><button id="wrapper-click"></button></h3>
+    </header>
+    <script src="events.js"></script>
+    <script>
+        var canvas = document.getElementById("text")
+        var t = canvas.getContext("2d")
+        var tam = function() {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight - 70;
+        }
+        tam()
+        t.font = "30px monospace"
+        t.fillStyle = "White"
+        t.fillText("404 Error", canvas.width / 2, 50)
+        t.font = "17px monospace"
+        t.fillText("Pagina não encontrada", canvas.width / 2, 70)
+
+        var estrela = function() {
+            var aleatorioX = Math.random() * (canvas.width - 0) + 0;
+            var aleatorioY = Math.random() * (canvas.height - 0) + 0;
+            t.fillStyle = "white"
+            t.fillRect(aleatorioX, aleatorioY, 5, 5)
+            console.log(aleatorioX + " Y:" + aleatorioY)
+        }
+        for(var i = 0; i<100; i++) {
+            estrela()
+        }
+        estrela()
+    </script>
+</body>
+</html>
