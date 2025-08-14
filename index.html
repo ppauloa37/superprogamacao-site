@@ -4,56 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super progamação | Site</title>
-    <link rel="icon" href="static/img/lâmpada.webp">
-    <style>
-        * {
-            text-decoration: none;
-            color: white;
-        }
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0px;
-        }
-        body {
-            background-color: black;
-            color: white;
-            margin: 0px;
-            font-family: monospace;
-        }
-        .logo {
-            font-size: 20px;
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-        #root {
-            background-color: rgba(99, 99, 99, 0.514);
-            padding: 2px;
-            display: flex;
-            
-            
-        } 
-        h1,h2, h3, p {
-            margin-right: 10px;
-            margin-left: 10px;
-        }
-        #wrapper {
-            text-align: center;
-        }
-        .canalfoto {
-            width: 500px;
-            border-radius: 30px;
-        }
-        .help {
-            color:gray;
-        }
-        #licon {
-            width: 200px;
-        }
-        #texto {
-            margin-top: 100px;
-        }
-    </style>
+    <link rel="icon" href="imgs/lâmpada.webp">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
     <header id="root">
@@ -62,6 +14,8 @@
         <h3><a href="/ajuda">Ajuda</a></h3>
         <h3><a href="/entrar">Entrar</a></h3>
         <h3><a href="/cads">Cadastrar-se</a></h3>
+        <h3><button id="seta-fechar">↑</button></h3>
+        <h3><button id="wrapper-click"></button></h3>
     </header>
     <div id="wrapper">
         <div id="texto">
@@ -87,6 +41,13 @@
                 historias e progressões<br>
                 vamos entrar junto nessa historia<br>
             </p>
+            <h2>Canal</h2>
+            <p>
+                Conheça nosso Canal
+                <section>
+
+                </section>
+            </p>
         </div>
         <div id="aulas">
             <h1>Link de aulas</h1>
@@ -101,5 +62,6 @@
             </div> 
         </div>
     </div>
+    <script src="static/js/events.js"></script>
 </body>
 </html>
